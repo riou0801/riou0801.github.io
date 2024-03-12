@@ -1,0 +1,16 @@
+lang: ja
+
+home:
+  welcome: riou0801.github.io
+
+menu_links: []
+extra_head: []
+
+# Metas plugin https://lume.land/plugins/metas/#description
+metas:
+  site: riou's blog
+  description: "lumeでgithub pageを使ってみたかった"
+  title: "=title"
+  image: "=image"
+  twitter: "@username"
+  lang: ja

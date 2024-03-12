@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+  <channel>
+    <title>riou&apos;s blog</title>
+    <link>http://localhost:3000/</link>
+    <atom:link href="http://localhost:3000/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>lumeでgithub pageを使ってみたかった</description>
+    <lastBuildDate>Tue, 12 Mar 2024 07:37:42 GMT</lastBuildDate>
+    <language>en</language>
+    <generator>Lume v2.1.1</generator>
+    <item>
+      <title>日本語テスト</title>
+      <link>http://localhost:3000/posts/second/</link>
+      <guid isPermaLink="false">http://localhost:3000/posts/second/</guid>
+      <content:encoded>
+        <![CDATA[<h1>日本語で書いてみる</h1>
+        <p>日本語のテスト
+        絵文字はどうかな
+        😀😮‍💨🈂️🧑‍🎤😨</p>
+        ]]>
+      </content:encoded>
+      <pubDate>Tue, 12 Mar 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>sample</title>
+      <link>http://localhost:3000/posts/sample/</link>
+      <guid isPermaLink="false">http://localhost:3000/posts/sample/</guid>
+      <content:encoded>
+        <![CDATA[<h1>this is a sample</h1>
+        <p>sample page
+        I want to manage page for <strong>markdown</strong> and layout with <strong>typescript</strong>
+        So what can i do??</p>
+        ]]>
+      </content:encoded>
+      <pubDate>Mon, 11 Mar 2024 06:21:16 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
