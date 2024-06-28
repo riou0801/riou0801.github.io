@@ -2,6 +2,7 @@
 date: 2024-03-12
 title: 日本語テスト 
 author: riou0801
+draft: true
 ---
 
 # 日本語で書いてみる
