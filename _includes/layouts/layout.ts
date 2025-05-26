@@ -7,6 +7,7 @@ export default ({ title, content }: Lume.Data, helper: Lume.Helpers) => {
   <html>
     <head>
       <title>${title}</title>
+      <link rel="stylesheet" href="/css/catppuccin-overrides.css">
     </head>
     <body>
       ${menuHtml} ${content}

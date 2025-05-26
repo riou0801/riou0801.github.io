@@ -1,0 +1,65 @@
+@import url('https://cdn.jsdelivr.net/npm/@catppuccin/palette/css/catppuccin.css');
+
+:root {
+  /* Catppuccin Mocha - Light mode (mapping to existing theme variables) */
+  --color-base: var(--ctp-mocha-text);
+  --color-text: var(--ctp-mocha-subtext0);
+  --color-dim: var(--ctp-mocha-subtext1);
+  --color-line: var(--ctp-mocha-overlay0);
+  --color-background: var(--ctp-mocha-base);
+  --color-highlight: var(--ctp-mocha-surface0);
+  --color-primary: var(--ctp-mocha-mauve);
+  --color-primary-highlight: var(--ctp-mocha-pink);
+
+  --code-text: var(--ctp-mocha-text);
+  --code-comment: var(--ctp-mocha-overlay1);
+  --code-token-1: var(--ctp-mocha-red);    /* Prev #91084d: Keywords, selectors */
+  --code-token-2: var(--ctp-mocha-peach);  /* Prev #913608: Booleans, numbers, tags */
+  --code-token-3: var(--ctp-mocha-sky);    /* Prev #086891: Strings, operators, variables */
+  --code-token-4: var(--ctp-mocha-green);  /* Prev #369108: Attributes, regex */
+  --code-inserted: var(--ctp-mocha-green);
+  --code-deleted: var(--ctp-mocha-red);
+  --code-border: var(--ctp-mocha-overlay1);
+  --code-background: var(--ctp-mocha-surface0);
+  --code-background-selection: var(--ctp-mocha-surface2);
+
+  --pagefind-ui-primary: var(--ctp-mocha-text);
+  --pagefind-ui-text: var(--ctp-mocha-subtext0);
+  --pagefind-ui-background: var(--ctp-mocha-surface0);
+  --pagefind-ui-border: var(--ctp-mocha-overlay0);
+  --pagefind-ui-tag: var(--ctp-mocha-surface0);
+
+  /* Link colors */
+  --color-link: var(--ctp-mocha-sapphire);
+  --color-link-hover: var(--ctp-mocha-iris);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Catppuccin Mocha - Dark mode (mapping to existing theme variables) */
+    --color-base: var(--ctp-mocha-text);
+    --color-text: var(--ctp-mocha-subtext0);
+    --color-dim: var(--ctp-mocha-subtext1);
+    --color-line: var(--ctp-mocha-overlay0);
+    --color-background: var(--ctp-mocha-base);
+    --color-highlight: var(--ctp-mocha-surface0);
+    --color-primary: var(--ctp-mocha-mauve);
+    --color-primary-highlight: var(--ctp-mocha-pink);
+
+    --code-text: var(--ctp-mocha-text);
+    --code-comment: var(--ctp-mocha-overlay1);
+    --code-token-1: var(--ctp-mocha-red);
+    --code-token-2: var(--ctp-mocha-peach);
+    --code-token-3: var(--ctp-mocha-sky);
+    --code-token-4: var(--ctp-mocha-green);
+    --code-inserted: var(--ctp-mocha-green);
+    --code-deleted: var(--ctp-mocha-red);
+    --code-border: var(--ctp-mocha-overlay1);
+    --code-background: var(--ctp-mocha-surface0);
+    --code-background-selection: var(--ctp-mocha-surface2);
+
+    /* Link colors for dark mode (if different, but typically same as :root for this theme) */
+    --color-link: var(--ctp-mocha-sapphire);
+    --color-link-hover: var(--ctp-mocha-iris);
+  }
+}
