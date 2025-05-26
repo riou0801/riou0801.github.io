@@ -5,4 +5,9 @@ const site = lume();
 
 site.use(blog())
 
+// Preprocessor to set layout for all markdown pages
+site.preprocess(['.md'], (page) => {
+  page.data.layout = 'layouts/layout.ts';
+});
+
 export default site;
