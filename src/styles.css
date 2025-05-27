@@ -13,10 +13,14 @@
 
   --code-text: var(--ctp-mocha-text);
   --code-comment: var(--ctp-mocha-overlay1);
-  --code-token-1: var(--ctp-mocha-red);    /* Prev #91084d: Keywords, selectors */
-  --code-token-2: var(--ctp-mocha-peach);  /* Prev #913608: Booleans, numbers, tags */
-  --code-token-3: var(--ctp-mocha-sky);    /* Prev #086891: Strings, operators, variables */
-  --code-token-4: var(--ctp-mocha-green);  /* Prev #369108: Attributes, regex */
+  --code-token-1: var(--ctp-mocha-red);
+  /* Prev #91084d: Keywords, selectors */
+  --code-token-2: var(--ctp-mocha-peach);
+  /* Prev #913608: Booleans, numbers, tags */
+  --code-token-3: var(--ctp-mocha-sky);
+  /* Prev #086891: Strings, operators, variables */
+  --code-token-4: var(--ctp-mocha-green);
+  /* Prev #369108: Attributes, regex */
   --code-inserted: var(--ctp-mocha-green);
   --code-deleted: var(--ctp-mocha-red);
   --code-border: var(--ctp-mocha-overlay1);

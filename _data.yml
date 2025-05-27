@@ -6,6 +6,8 @@ home:
 menu_links: []
 extra_head: []
 
+layout: layout.ts
+
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
   site: riou's blog

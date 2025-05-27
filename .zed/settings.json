@@ -1,0 +1,36 @@
+{
+  "lsp": {
+    "deno": {
+      "initialization_options": {
+        "enable": true
+      }
+    }
+  },
+  // "format_on_save": "on",
+  // "formatter": {
+  //   "external": {
+  //     "command": "deno",
+  //     "arguments": ["fmt", "-"]
+  //   }
+  // },
+  "languages": {
+    "TypeScript": {
+      "language_servers": [
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint",
+        "..."
+      ]
+    },
+    "TSX": {
+      "language_servers": [
+        "deno",
+        "!typescript-language-server",
+        "!vtsls",
+        "!eslint",
+        "..."
+      ]
+    }
+  }
+}
