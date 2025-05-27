@@ -1,12 +1,17 @@
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
 import basePath from "lume/plugins/base_path.ts";
+import info from "npm:markdown-it-info";
+
+const markdown = {
+  plugins: [info],
+};
 
 const site = lume({
   src: "./src",
   dest: "./_site",
   location: new URL("https://riou0801.github.io"),
-});
+}, { markdown });
 
 // Copy static assets from src directories
 site.copy("css");
@@ -17,7 +22,7 @@ site.data("posts", {
   url: (post) => {
     const filename = post.src.path.split("/").pop()?.replace(/\.md$/, "") || "";
     return `/posts/${filename}/`;
-  }
+  },
 });
 
 // Process markdown files
@@ -25,7 +30,7 @@ site.process([".md"], (page) => {
   // Set type and layout for posts
   if (page.src?.path?.includes("/posts/")) {
     page.data.type = "post";
-    
+
     // Only set layout if not explicitly defined in frontmatter
     if (!page.data.layout) {
       page.data.layout = "layout.ts";

@@ -34,6 +34,7 @@
     "npm:lightningcss-wasm@1.30.1": "1.30.1",
     "npm:markdown-it-attrs@4.3.1": "4.3.1_markdown-it@14.1.0",
     "npm:markdown-it-deflist@3.0.0": "3.0.0",
+    "npm:markdown-it-info@*": "1.0.2",
     "npm:markdown-it@14.1.0": "14.1.0",
     "npm:meriyah@6.0.5": "6.0.5",
     "npm:pagefind@1.3.0": "1.3.0",
@@ -190,6 +191,9 @@
     },
     "markdown-it-deflist@3.0.0": {
       "integrity": "sha512-OxPmQ/keJZwbubjiQWOvKLHwpV2wZ5I3Smc81OjhwbfJsjdRrvD5aLTQxmZzzePeO0kbGzAo3Krk4QLgA8PWLg=="
+    },
+    "markdown-it-info@1.0.2": {
+      "integrity": "sha512-5FXq56NfQZDtvLmHA2dn3JSY88bkjeQoEFL0X4IYayCoy3ubNsVTvfS0vUZH68WCsur5BvgfJAwO/SG3w+02sA=="
     },
     "markdown-it@14.1.0": {
       "integrity": "sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==",
