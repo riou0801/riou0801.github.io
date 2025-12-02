@@ -1,5 +1,6 @@
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
+import favicon from "lume/plugins/favicon.ts";
 import basePath from "lume/plugins/base_path.ts";
 import info from "npm:markdown-it-info";
 
@@ -41,6 +42,9 @@ site.process([".md"], (page) => {
 // Use plugins
 site.use(metas());
 site.use(basePath());
+site.use(favicon({
+  input: "/assets/favicon.webp",
+}));
 
 // Process markdown files to ensure correct post types
 site.process([".md"], (page) => {
