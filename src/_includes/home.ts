@@ -13,8 +13,39 @@ export default ({ title, content, search }: LumeData, helpers: LumeHelpers) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
       <link rel="stylesheet" href="/css/styles.css">
+      <script>
+        (function() {
+          const saved = localStorage.getItem('theme');
+          if (saved) document.documentElement.setAttribute('data-theme', saved);
+        })();
+      <\/script>
     </head>
     <body>
+      <nav class="site-nav">
+        <span></span>
+        <span class="site-title">riou's blog</span>
+        <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え"></button>
+      </nav>
+      <script>
+        (function() {
+          const btn = document.getElementById('theme-toggle');
+          function getTheme() {
+            const saved = localStorage.getItem('theme');
+            if (saved) return saved;
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+          }
+          applyTheme(getTheme());
+          btn.addEventListener('click', function() {
+            const next = getTheme() === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+          });
+        })();
+      <\/script>
       <header>
         <h1>${title}</h1>
       </header>
