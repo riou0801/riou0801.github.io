@@ -29,6 +29,7 @@ export default ({ title, content, search }: LumeData, helpers: LumeHelpers) => {
       <script>
         (function() {
           const btn = document.getElementById('theme-toggle');
+          if (!btn) return;
           function getTheme() {
             const saved = localStorage.getItem('theme');
             if (saved) return saved;

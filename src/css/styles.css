@@ -37,7 +37,7 @@
 
 /* Catppuccin Latte (ライトモード) */
 @media (prefers-color-scheme: light) {
-    :root:not([data-theme="dark"]) {
+    :root {
         --rosewater: #dc8a78;
         --flamingo: #dd7878;
         --pink: #ea76cb;
