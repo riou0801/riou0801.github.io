@@ -217,6 +217,7 @@ footer {
 .home-link i {
     color: var(--teal);
     font-size: 1.2rem;
+    pointer-events: none;
 }
 
 .site-nav .home-link {
