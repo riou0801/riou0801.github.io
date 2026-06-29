@@ -62,7 +62,7 @@ export default (
       <nav class="site-nav">
         ${
     showNavigation
-      ? `<button class="home-link" role="link" aria-label="ホーム" onclick="location.href='/'"><i class="ph ph-house"></i></button>`
+      ? `<button class="home-link" role="link" aria-label="ホーム" onclick="location.href='/'"></button>`
       : `<span></span>`
   }
         <span class="site-title">riou's blog</span>
@@ -70,6 +70,8 @@ export default (
       </nav>
       <script>
         (function() {
+          const homeLink = document.querySelector('.site-nav .home-link');
+          if (homeLink) homeLink.innerHTML = '<i class="ph ph-house"></i>';
           const btn = document.getElementById('theme-toggle');
           if (!btn) return;
           function getTheme() {
