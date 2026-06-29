@@ -1,14 +1,38 @@
 {
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "lume": "deno run -P=lume lume/cli.ts",
     "build": "deno task lume",
     "serve": "deno task lume -s"
   },
+  "lock": false,
   "unstable": ["temporal"],
   "compilerOptions": {
     "types": ["lume/types.ts"]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.1.2/"
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.6/"
+  },
+  "permissions": {
+    "lume": {
+      "read": true,
+      "write": true,
+      "import": [
+        "cdn.jsdelivr.net:443",
+        "jsr.io:443",
+        "deno.land:443",
+        "esm.sh:443"
+      ],
+      "net": [
+        "0.0.0.0",
+        "jsr.io:443",
+        "cdn.jsdelivr.net:443",
+        "data.jsdelivr.com:443",
+        "registry.npmjs.org:443"
+      ],
+      "env": true,
+      "run": true,
+      "ffi": true,
+      "sys": true
+    }
   }
 }
