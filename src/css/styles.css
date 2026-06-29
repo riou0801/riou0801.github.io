@@ -210,6 +210,15 @@ footer {
     border-color: var(--overlay1);
 }
 
+.theme-toggle i {
+    color: var(--overlay1);
+}
+
+.home-link i {
+    color: var(--teal);
+    font-size: 1.2rem;
+}
+
 .post-nav {
     display: flex;
     justify-content: space-between;
