@@ -38,7 +38,7 @@ export default ({ title, content, search }: LumeData, helpers: LumeHelpers) => {
           }
           function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
-            btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+            btn.innerHTML = theme === 'dark' ? '<i class="ph ph-sun"></i>' : '<i class="ph ph-moon"></i>';
           }
           applyTheme(getTheme());
           btn.addEventListener('click', function() {
