@@ -31,6 +31,7 @@ export default (
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
       <link rel="stylesheet" href="/css/styles.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
       <script>
         (function() {
           const saved = localStorage.getItem('theme');
@@ -40,7 +41,7 @@ export default (
     </head>
     <body>
       <nav class="site-nav">
-        <a href="/" class="home-link">Home</a>
+        <a href="/" class="home-link" aria-label="ホーム"><i class="ph ph-house"></i></a>
         <span class="site-title">${title}</span>
         <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え"></button>
       </nav>
@@ -76,7 +77,7 @@ export default (
       ? `<a href="${prevPost.url}" class="prev-link">← 前の記事: ${prevPost.title}</a>`
       : `<span class="prev-link disabled">← 前の記事はありません</span>`
   }
-        <a href="/" class="home-link">ホーム</a>
+        <a href="/" class="home-link" aria-label="ホーム"><i class="ph ph-house"></i></a>
         ${
     nextPost
       ? `<a href="${nextPost.url}" class="next-link">次の記事: ${nextPost.title} →</a>`

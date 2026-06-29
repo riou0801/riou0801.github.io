@@ -50,6 +50,7 @@ export default (
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
       <link rel="stylesheet" href="/css/styles.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
       <script>
         (function() {
           const saved = localStorage.getItem('theme');
@@ -60,7 +61,9 @@ export default (
     <body>
       <nav class="site-nav">
         ${
-    showNavigation ? `<a href="/" class="home-link">Home</a>` : `<span></span>`
+    showNavigation
+      ? `<a href="/" class="home-link" aria-label="ホーム"><i class="ph ph-house"></i></a>`
+      : `<span></span>`
   }
         <span class="site-title">riou's blog</span>
         <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え"></button>
@@ -101,7 +104,7 @@ export default (
           }</a>`
           : `<span class="prev-link disabled">← No Older Posts</span>`
       }
-        <a href="/" class="home-link">Home</a>
+        <a href="/" class="home-link" aria-label="ホーム"><i class="ph ph-house"></i></a>
         ${
         nextPostUrl
           ? `<a href="${nextPostUrl}" class="next-link">Newer: ${

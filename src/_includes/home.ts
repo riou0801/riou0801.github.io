@@ -13,6 +13,7 @@ export default ({ title, content, search }: LumeData, helpers: LumeHelpers) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
       <link rel="stylesheet" href="/css/styles.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
       <script>
         (function() {
           const saved = localStorage.getItem('theme');
