@@ -62,7 +62,7 @@ export default (
       <nav class="site-nav">
         ${
     showNavigation
-      ? `<a href="/" class="home-link" aria-label="ホーム"><i class="ph ph-house"></i></a>`
+      ? `<button class="home-link" role="link" aria-label="ホーム" onclick="location.href='/'"><i class="ph ph-house"></i></button>`
       : `<span></span>`
   }
         <span class="site-title">riou's blog</span>

@@ -225,13 +225,14 @@ footer {
     border: 1px solid var(--surface2);
     border-radius: 0.375rem;
     line-height: 1;
+    font: inherit;
+    cursor: pointer;
     transition:
         background-color 0.2s ease,
         border-color 0.2s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     width: 2rem;
     height: 2rem;
 }

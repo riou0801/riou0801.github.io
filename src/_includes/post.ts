@@ -41,7 +41,7 @@ export default (
     </head>
     <body>
       <nav class="site-nav">
-        <a href="/" class="home-link" aria-label="ホーム"><i class="ph ph-house"></i></a>
+        <button class="home-link" role="link" aria-label="ホーム" onclick="location.href='/'"><i class="ph ph-house"></i></button>
         <span class="site-title">${title}</span>
         <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え"></button>
       </nav>
