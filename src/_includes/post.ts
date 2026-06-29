@@ -48,7 +48,9 @@ export default (
       <script>
         (function() {
           const homeLink = document.querySelector('.site-nav .home-link');
-          if (homeLink) homeLink.innerHTML = '<i class="ph ph-house"></i>';
+          document.fonts.ready.then(function() {
+            if (homeLink) homeLink.innerHTML = '<i class="ph ph-house"></i>';
+          });
           const btn = document.getElementById('theme-toggle');
           if (!btn) return;
           function getTheme() {
