@@ -13,8 +13,41 @@ export default ({ title, content, search }: LumeData, helpers: LumeHelpers) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
       <link rel="stylesheet" href="/css/styles.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+      <script>
+        (function() {
+          const saved = localStorage.getItem('theme');
+          if (saved) document.documentElement.setAttribute('data-theme', saved);
+        })();
+      <\/script>
     </head>
     <body>
+      <nav class="site-nav">
+        <span></span>
+        <span class="site-title">riou's blog</span>
+        <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え"></button>
+      </nav>
+      <script>
+        (function() {
+          const btn = document.getElementById('theme-toggle');
+          if (!btn) return;
+          function getTheme() {
+            const saved = localStorage.getItem('theme');
+            if (saved) return saved;
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            btn.innerHTML = theme === 'dark' ? '<i class="ph ph-sun"></i>' : '<i class="ph ph-moon"></i>';
+          }
+          applyTheme(getTheme());
+          btn.addEventListener('click', function() {
+            const next = getTheme() === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+          });
+        })();
+      <\/script>
       <header>
         <h1>${title}</h1>
       </header>

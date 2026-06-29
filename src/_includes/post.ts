@@ -31,11 +31,43 @@ export default (
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
       <link rel="stylesheet" href="/css/styles.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+      <script>
+        (function() {
+          const saved = localStorage.getItem('theme');
+          if (saved) document.documentElement.setAttribute('data-theme', saved);
+        })();
+      <\/script>
     </head>
     <body>
       <nav class="site-nav">
+        <button class="home-link" role="link" aria-label="ホーム" onclick="location.href='/'"></button>
         <span class="site-title">${title}</span>
+        <button class="theme-toggle" id="theme-toggle" aria-label="テーマ切り替え"></button>
       </nav>
+      <script>
+        (function() {
+          const homeLink = document.querySelector('.site-nav .home-link');
+          if (homeLink) homeLink.innerHTML = '<i class="ph ph-house"></i>';
+          const btn = document.getElementById('theme-toggle');
+          if (!btn) return;
+          function getTheme() {
+            const saved = localStorage.getItem('theme');
+            if (saved) return saved;
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            btn.innerHTML = theme === 'dark' ? '<i class="ph ph-sun"></i>' : '<i class="ph ph-moon"></i>';
+          }
+          applyTheme(getTheme());
+          btn.addEventListener('click', function() {
+            const next = getTheme() === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+          });
+        })();
+      <\/script>
 
       <main class="content">
         ${content}
@@ -47,7 +79,7 @@ export default (
       ? `<a href="${prevPost.url}" class="prev-link">← 前の記事: ${prevPost.title}</a>`
       : `<span class="prev-link disabled">← 前の記事はありません</span>`
   }
-        <a href="/" class="home-link">ホーム</a>
+        <a href="/" class="home-link" aria-label="ホーム"><i class="ph ph-house"></i></a>
         ${
     nextPost
       ? `<a href="${nextPost.url}" class="next-link">次の記事: ${nextPost.title} →</a>`
