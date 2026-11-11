@@ -33,7 +33,7 @@ jobs:
           cp src/static/assets/favicon.webp _site/assets/favicon.webp
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5.0.0
+        uses: actions/configure-pages@v6.0.0
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5.0.0
