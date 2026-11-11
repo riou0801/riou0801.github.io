@@ -27,7 +27,10 @@ jobs:
         uses: boykush/scraps@v1.2.0
 
       - name: Build site
-        run: scraps -C src build
+        run: |
+          scraps -C src build
+          mkdir -p _site/assets
+          cp src/static/assets/favicon.webp _site/assets/favicon.webp
 
       - name: Setup Pages
         uses: actions/configure-pages@v5.0.0
