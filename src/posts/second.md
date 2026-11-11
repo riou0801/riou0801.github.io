@@ -1,7 +1,9 @@
 ---
-date: 2024-03-12
 title: 日本語テスト 
-author: riou0801
+type: Blog
+generated:
+  by: human:riou0801
+  at: 2024-03-12T00:00:00+09:00
 draft: true
 ---
 

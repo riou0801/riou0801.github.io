@@ -1,0 +1,9 @@
+output_dir = "../_site"
+
+[ssg]
+base_url = "https://riou0801.github.io/"
+title = "riou's blog"
+lang_code = "ja"
+description = "lumeでgithub pageを使ってみたかった"
+favicon = "https://riou0801.github.io/assets/favicon.webp"
+
