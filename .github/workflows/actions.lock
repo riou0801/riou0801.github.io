@@ -3,7 +3,7 @@
 # Docs: https://gh.io/actions-lockfile
 version: 'v0.0.3'
 workflows:
-    '.github/workflows/lume.yaml':
+    '.github/workflows/deploy-pages.yml':
         - 'actions/checkout@v4.4.0'
         - 'actions/configure-pages@v5.0.0'
         - 'actions/deploy-pages@v4.0.5'
