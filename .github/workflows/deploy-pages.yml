@@ -24,7 +24,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Scraps
-        uses: boykush/scraps@v1.2.0
+        uses: boykush/scraps@v5.1.1
 
       - name: Build site
         run: |
