@@ -8,7 +8,7 @@ workflows:
         - 'actions/configure-pages@v5.0.0'
         - 'actions/deploy-pages@v4.0.5'
         - 'actions/upload-pages-artifact@v3.0.1'
-        - 'boykush/scraps@v1.2.0'
+        - 'boykush/scraps@v5.1.1'
     '.github/workflows/verify-lockfile.yml':
         - 'actions/checkout@v4.4.0'
 dependencies:
@@ -39,8 +39,8 @@ dependencies:
         repo_id: 496012378
         uses:
             - 'actions/upload-artifact@v4'
-    'boykush/scraps@v1.2.0':
-        ref: 'v1.2.0'
-        commit: 'sha1-9a27d25911b62ce6f03851e6809764327774a185'
+    'boykush/scraps@v5.1.1':
+        ref: 'v5.1.1'
+        commit: 'sha1-95c9d75bf5e6d68c17bb0d92a508a43464f2ed39'
         owner_id: 23194090
         repo_id: 646458147
