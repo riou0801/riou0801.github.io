@@ -1,3 +1,6 @@
 _site/
 _cache/
 deno.lock
+src/.scraps/
+# CocoIndex Code (ccc)
+/.cocoindex_code/

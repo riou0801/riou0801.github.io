@@ -1,6 +1,8 @@
 ---
-author: riou0801
 title: sample
+type: Blog
+generated:
+  by: human:riou0801
 draft: true
 ---
 
